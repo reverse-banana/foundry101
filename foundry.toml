@@ -2,5 +2,12 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+remappings = ["@chainlink/contracts/=lib/chainlink-brownie-contracts/contracts/"]
+forge = ['forge-std/=lib/forge-std/src/']
+fs_permissions = [
+    { access = "read", path = "./broadcast" },
+    { access = "read", path = "./reports" },
+]
 
+# ffi give ability to run arbitrary commands (script and stuff) from your s.sol or test file as you were using ordinate shell
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
